@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\IncomeBridgeAPI.props" />
+</Project>
