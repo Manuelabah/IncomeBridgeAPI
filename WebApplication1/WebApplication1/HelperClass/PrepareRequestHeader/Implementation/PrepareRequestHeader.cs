@@ -9,13 +9,13 @@ namespace WebApplication1.HelperClass.PrepareRequestHeader.Implementation
         {
             _configuration = configuration;
         }
-        public HttpRequestMessage PrepareRequestHeaderAsync(string customerId)
+        public HttpRequestMessage PrepareRequestHeaderAsync(string? customerId)
         {
-            var url = _configuration["IncomeUri:uri"];
+            string? url = _configuration["IncomeUri:uri"];
 
             var uri = url.Replace("Id", customerId);
 
-            using var httpRequestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
+            var httpRequestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
             httpRequestMessage.Headers.Add(_configuration["MonoConnection:mono-sec-key"], _configuration["MonoConnection:mono-sec-key-value"]);
 
             return httpRequestMessage;

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IncomeBridgeAPI</name>
+    </assembly>
+    <members>
+        <member name="M:WebApplication1.Controllers.GetAccountIncomeController.GetAccountIncome(System.String)">
+            <summary>
+            Return Customer income
+            </summary>
+            <param name="customerID"></param>
+            <returns>
+            Customer income
+            </returns>
+            <remarks>
+            Sample request
+            Get/api/GetAccountIncome
+            </remarks>
+            <response code = "200" > Return customer income</response>
+        </member>
+        <member name="M:WebApplication1.Controllers.GetAccountIncomeController.CreateUsre(IncomeBridgeAPI.Service.Implementation.Costomer.Model.UserDTO)">
+            <summary>
+            Create customer 
+            </summary>
+            <param name="customer"></param>
+            <returns>
+            Return created successful
+            </returns>
+            <remarks>
+            Sample request
+            Post/api/GetAccountIncome
+            </remarks>
+            <response code = "201" > Return created status code </response>
+        </member>
+    </members>
+</doc>
